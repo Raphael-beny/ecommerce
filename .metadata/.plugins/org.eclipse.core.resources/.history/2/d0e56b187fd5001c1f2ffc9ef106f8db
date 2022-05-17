@@ -1,0 +1,28 @@
+package br.com.ecommerceapi.service;
+
+import javax.validation.constraints.NotEmpty;
+
+import org.apache.camel.ProducerTemplate;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.validation.annotation.Validated;
+
+import br.com.ecommerceapi.dto.EnderecoViaCep;
+
+@Service
+@Validated
+public class EnderecoService {
+	
+	@Autowired
+	private ProducerTemplate producerTemplate;
+	
+	public EnderecoViaCep buscarPor(@NotEmpty(message = "O cep deve ser informado") String cep) {
+		
+		EnderecoViaCep enderecoEncontrado = 
+				producerTemplate.requestBody("direct:buscarEndereco", cep, EnderecoViaCep.class);
+		
+		return enderecoEncontrado;
+		
+	}
+
+}

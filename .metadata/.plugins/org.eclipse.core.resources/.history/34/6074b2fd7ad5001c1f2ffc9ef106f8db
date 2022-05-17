@@ -1,0 +1,5 @@
+package br.com.ecommerceapi.dto;
+
+public class EnderecoViaCep {
+
+}

@@ -1,0 +1,22 @@
+package br.com.ecommerceapi.dto;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.ToString;
+
+@Data
+@AllArgsConstructor
+@ToString
+public class EnderecoViaCep {
+	
+	private String logradouro;
+	
+	private String bairro;
+	
+	private String complemento;
+	
+	private String uf;
+	
+	private String localidade;
+
+}
