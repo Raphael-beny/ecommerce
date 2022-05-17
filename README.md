@@ -6,7 +6,7 @@ Criar nova database no banco mysql com nome ecommerce-api (conferir username e p
 
 Buildar a aplicação que subirá na porta 9091
 
-as apis sera as seguintes:
+as apis são as seguintes:
 
 GET
 localhost:9091/enderecos/cep/88702200
